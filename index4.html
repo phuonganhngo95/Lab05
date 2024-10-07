@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+</head>
+<body>
+    <script>
+        // Có phương trình a*x + b = 0
+        // Viết phương trình biện luận nghiệm x
+        // Cách 1
+        // var a = prompt("Nhập giá trị a: ");
+        // var b = prompt("Nhập giá trị b: ");
+        // if(a == 0) {
+        //     if( b == 0) {
+        //         document.write("Phương trình có vô số nghiệm");
+        //     } else {
+        //         document.write("Phương trình vô nghiệm");
+        //     }
+        // } else {
+        //     let x = (-b/a);
+        //     document.write("Phương trình có nghiệm duy nhất: ", x);
+        // }
+
+        // Cách 2
+        // if(a == 0 && b == 0) {
+        //     document.write("Phương trình vô số nghiệm");
+        // } else if(a == 0 && b != 0) {
+        //     document.write("Phương trình vô nghiệm");
+        // } else {
+        //     let x = (-b/a);
+        //     document.write("Phương trình có nghiệm duy nhất: ", x);
+        // }
+
+
+        // Có phường trình bậc 2: a*x^2 + b*x + c = 0
+        // Viết phương trình biện luận nghiệm x
+        var a = prompt("Nhập giá trị a: ");
+        var b = prompt("Nhập giá trị b: ");
+        var c = prompt("Nhập giá trị c: ");
+        var delta = Math.pow(b, 2) - 4*a*c;
+        if(delta < 0) {
+            document.write("Phương trình vô nghiệm");
+        } else if(delta == 0) {
+            var x = (-b/(2*a));
+            document.write("Phương trình có nghiệm kép x = " + x);
+        } else {
+            var x1 = (-b+Math.sqrt(delta))/(2*a);
+            var x2 = (-b-Math.sqrt(delta))/(2*a);
+            document.write("Phương trình có 2 nghiệm phân biệt x1 = " + x1 + ", x2 = " + x2);
+        }
+
+        // Cho một mảng arr=[1, 5, 6, 9, 9, 4, 5, 6, 54, 7, 3, 23, 6, 7]
+        // 1. In ra ngoài màn hình mảng trên
+        // 2. Hiển thị các số trong mảng có 2 lần xuất hiện
+        // 3. Đếm số xuất hiện của các số đó
+        // var arr = [1, 5, 6, 9, 9, 4, 5, 6, 54, 7, 3, 23, 6, 7];
+        // for(let i = 0; i < arr.length; i++) {
+        //     document.write(arr[i], " ");
+        // }
+
+        // // 2. Hiển thị các số trong mảng có 2 lần xuất hiện
+        // document.write("<br> Số 2 lần xuất hiện: ");
+        // arr.sort();
+        // for(let i = 0; i < arr.length; i++) {
+        //     if(arr[i] == arr[i+1]) {
+        //         if(arr[i] == 0) {
+        //             document.write(arr[i], " ");
+        //         } else {
+        //             if(arr[i] != arr[i-1]) {
+        //                 document.write(arr[i], " ");
+        //             }
+        //         }
+        //     }
+        // }
+
+        //  // 3. Đếm số xuất hiện của các số đó
+        // document.write("<br> Số lần các số xuất hiện: <br>")
+        // for(let i = 0; i < arr.length; i++) {
+        //     if(arr[i] == arr[i+1]) {
+        //         let dem = 1;
+        //         if(i == 0) {
+        //             document.write(arr[i], " :");
+        //             for(let j = i; j < arr.length; j++) {
+        //                 if(arr[i] == arr[j]) {
+        //                     dem++;
+        //                 }
+        //             }
+        //             document.write(arr[i], " - ", dem,  "<br>");
+        //         } else {
+        //             if(arr[i] != arr[i-1]) {
+        //                 for(let j = i+1; j < arr.length; j++) {
+        //                     if(arr[i] == arr[j]) {
+        //                         dem++;
+        //                     }
+        //                 }
+        //                 document.write(arr[i], " - ", dem,  "<br>");
+        //             }
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+</html>
