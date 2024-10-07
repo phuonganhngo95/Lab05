@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login information</title>
+    <link rel="stylesheet" href="./b1.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post" name="login_form">
+            <table>
+                <tr>
+                    <th colspan="2" align="left"><h1>Login Information</h1></th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="username">Username:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" id="username" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember Set</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" onclick="check()">Login</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script src="./b1.js"></script>
+</body>
+</html>
