@@ -22,7 +22,7 @@
         //     let x = (-b/a);
         //     document.write("Phương trình có nghiệm duy nhất: ", x);
         // }
-
+        // 
         // Cách 2
         // if(a == 0 && b == 0) {
         //     document.write("Phương trình vô số nghiệm");
@@ -36,20 +36,41 @@
 
         // Có phường trình bậc 2: a*x^2 + b*x + c = 0
         // Viết phương trình biện luận nghiệm x
-        var a = prompt("Nhập giá trị a: ");
-        var b = prompt("Nhập giá trị b: ");
-        var c = prompt("Nhập giá trị c: ");
-        var delta = Math.pow(b, 2) - 4*a*c;
-        if(delta < 0) {
-            document.write("Phương trình vô nghiệm");
-        } else if(delta == 0) {
-            var x = (-b/(2*a));
-            document.write("Phương trình có nghiệm kép x = " + x);
-        } else {
-            var x1 = (-b+Math.sqrt(delta))/(2*a);
-            var x2 = (-b-Math.sqrt(delta))/(2*a);
-            document.write("Phương trình có 2 nghiệm phân biệt x1 = " + x1 + ", x2 = " + x2);
-        }
+        // var so_a = prompt("Bạn hãy nhập vào số a: ");
+        // var so_b = prompt("Bạn hãy nhập vào số b: ");
+        // var so_c = prompt("Bạn hãy nhập vào số c: ");
+        // function ptb1(b, c) {
+        //     if(b == 0) {
+        //         if(c == 0) {
+        //             document.write("Phương trình vô số nghiệm");
+        //         } else {
+        //             document.write("Phương trình vô nghiệm");
+        //         }
+        //     } else {
+        //         nghiem = -b/c;
+        //         document.write("Phuong trình có nghiệm là: " + nghiem);
+        //     }
+        // }
+        // 
+        // function ptb2(a, b, c) {
+        //     if(a == 0) {
+        //         ptb1(b, c);
+        //     } else {
+        //         let delta = Math.pow(b, 2) - 4*a*c;
+        //             if(delta < 0) {
+        //                 document.write("Phương trình vô nghiệm");
+        //             } else if(delta == 0) {
+        //                 var x = (-b/(2*a));
+        //                 document.write("Phương trình có nghiệm kép x = " + x);
+        //             } else {
+        //                 var x1 = (-b+Math.sqrt(delta))/(2*a);
+        //                 var x2 = (-b-Math.sqrt(delta))/(2*a);
+        //                 document.write("Phương trình có 2 nghiệm phân biệt x1 = " + x1 + ", x2 = " + x2);
+        //             }
+        //         }
+        // }
+        // ptb2(so_a, so_b, so_c);
+
 
         // Cho một mảng arr=[1, 5, 6, 9, 9, 4, 5, 6, 54, 7, 3, 23, 6, 7]
         // 1. In ra ngoài màn hình mảng trên
@@ -100,6 +121,68 @@
         //         }
         //     }
         // }
+
+        // Bài 4: Nhập vào một số bất kỳ,
+        // In ra màn hình các số nguyên tố nhỏ hơn số vừa nhập
+        // var n = prompt("Nhập 1 số bất kì: ");
+        // function ktr(num) {
+        //     if(num < 2) {
+        //         return false;
+        //     }
+        //     for(let i = 2; i <= Math.sqrt(num); i++) {
+        //         if(num % i === 0) {
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
+        // 
+        // function ngto(n) {
+        //     document.write("Các số nguyên tố nhỏ hơn số vừa nhập: ");
+        //     for(let i = 2; i < n; i++) {
+        //         if(ktr(i)) {
+        //             document.write(i + " ");
+        //         }
+        //     }
+        // }
+        // ngto(n);
+
+        // Bài 5: Nhập vào một số bất kỳ
+        // In ra màn hình các số chia hết cho 3 và nhỏ hơn số vừa nhập
+        // var n = prompt("Nhập 1 số bất kì: ");
+        // document.write("Số chia hết cho 3: ");
+        // for(let i = 1; i <= n-1; i++) {
+        //     if(i % 3 == 0) {
+        //         document.write(i + " ");
+        //     }
+        // }
+
+        // Bài 7: Nhập vào một ký tự bất kỳ. Kiểm tra đó có phải là kiểu số hay không?
+        // Nếu đúng đưa về thông báo true
+        // Nếu sai yêu cầu nhập lại
+        function kiemTraKyTu() {
+            do {
+                var kyTu = prompt("Nhập vào 1 ký tự bất kỳ:");
+                if (!isNaN(kyTu)) {
+                    alert("true");
+                    break;
+                } else {
+                    alert("Ký tự không phải là số. Vui lòng nhập lại.");
+                }
+            } while (true);
+        }
+        kiemTraKyTu();
+
+
+
+        ////Bài 8: In ra ngoài màn hình giá trị từ 1-> 50 sao cho số đó chia hết cho 5
+        // document.write("Số từ 1->50 chia hết cho 5: ");
+        // for(let i = 1; i <= 50; i++) {
+        //     if(i % 5 == 0) {
+        //         document.write(i + " ");
+        //     }
+        // }
+        // Có thể làm Lab9 10
     </script>
 </body>
 </html>
